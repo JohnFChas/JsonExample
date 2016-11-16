@@ -12,11 +12,9 @@ namespace JsonExample
     {
         static void Main(string[] args)
         {
-            var directory = String.Format("{0}{1}",
-                Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-                "\\Files");
+            var directory = Environment.CurrentDirectory;
 
-            var file = String.Format("{0}{1}", directory, "/data.json");
+            var file = String.Format("{0}{1}", directory, "\\data.json");
 
             if (!Directory.Exists(directory))
                 Directory.CreateDirectory(directory);
